@@ -1,0 +1,23 @@
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 12px;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.text {
+    margin-top: 8px;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.fallback {
+    margin-top: 16px;
+    font-size: 24px;
+    text-align: center;
+}

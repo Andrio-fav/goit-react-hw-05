@@ -1,0 +1,14 @@
+.listOfActors {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  overflow-x: hidden;
+}
+.actorCard {
+  width: 210px;
+  flex-shrink: 0;
+}
+.actorImg {
+  min-width: 100%;
+}

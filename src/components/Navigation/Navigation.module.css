@@ -1,0 +1,16 @@
+.hadr {
+  border-bottom: 2px solid grey;
+}
+.hadrNavList {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+}
+.hadrNavLink {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+}
+.linkIsActive {
+  color: darkorange;
+}

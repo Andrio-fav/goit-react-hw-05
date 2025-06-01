@@ -1,0 +1,10 @@
+.movieList {
+  list-style: initial;
+  padding-left: 2rem;
+}
+.movieItem {
+  margin-bottom: 8px;
+}
+.movieLink {
+  text-decoration: none;
+}
