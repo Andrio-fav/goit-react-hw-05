@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { fetchMovies } from '../../mtsAPI';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import MovieList from '../../components/MovieList/MovieList';
 import { useSearchParams } from 'react-router-dom';
 
