@@ -1,7 +1,7 @@
 import styles from './MovieCast.module.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCast } from '../../tmdi-api';
+import { fetchMovieCast } from '../../mtsAPI';
 
 export default function MovieCast() {
   const { movieId } = useParams();
