@@ -9,7 +9,7 @@ export default function MovieDetailsPage() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
-  const backLink = useRef(location.state);
+  const backLink = useRef(location.state?.from || '/'); // правильне збереження "звідки прийшов"
 
   useEffect(() => {
     async function fetchData() {
@@ -27,7 +27,8 @@ export default function MovieDetailsPage() {
   }, [movieId]);
 
   if (loading) return <p>Loading data, please wait...</p>;
-  if (error) return <ErrorMessage />;
+  if (error) return <p>Oops! Something went wrong while loading movie details.</p>;
+
   if (movie)
     return (
       <main>
@@ -59,13 +60,13 @@ export default function MovieDetailsPage() {
           <p className={styles.additionalInfo}>Additional information:</p>
           <ul>
             <li>
-              <Link to={`cast`}>Cast</Link>
+              <Link to="cast">Cast</Link>
             </li>
             <li>
-              <Link to={`reviews`}>Reviews</Link>
+              <Link to="reviews">Reviews</Link>
             </li>
-            <Outlet />
           </ul>
+          <Outlet />
         </div>
       </main>
     );

@@ -1,7 +1,7 @@
 import styles from './HomePage.module.css';
-import { Link } from 'react-router-dom';
 import { fetchTrendingMovies } from '../../mtsAPI';
 import { useEffect, useState } from 'react';
+import MovieList from '../../components/MovieList/MovieList';
 
 export default function HomePage() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -25,18 +25,11 @@ export default function HomePage() {
 
   if (loading) return <p>Loading data, please wait...</p>;
   if (error) return <ErrorMessage />;
+
   return (
     <main>
-      <h1>Trending today</h1>
-      <ul className={styles.title}>
-        {trendingMovies.map((movie) => {
-          return (
-            <li key={movie.id}>
-              <Link to={`movies/${movie.id}`}>{movie.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      <h1 className={styles.title}>Trending today</h1>
+      <MovieList movies={trendingMovies} />
     </main>
   );
 }
